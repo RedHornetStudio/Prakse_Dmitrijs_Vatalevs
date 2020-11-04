@@ -1,11 +1,118 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0px;
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-.nav {
+/* Navigation menu */
+.nav-menu {
   display: block;
   position: fixed;
-  height: 80px;
+  top: 0px;
   width: 100%;
-  border: 3px solid red;
+  z-index: 2;
+}
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #33333391;
+}
+.nav-menu li {
+  color: white;
+  float: left;
+  padding: 20px;
+}
+.nav-menu li:hover {
+  background-color: #16161691;
+  cursor: pointer;
+}
+
+/* Main */
+@font-face {
+  font-family: Gotham;
+  src: url(../../assets/fonts/Gotham-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Gotham;
+  src: url(../../assets/fonts/Gotham-Light.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Gotham;
+  src: url(../../assets/fonts/Gotham-LightItalic.otf);
+  font-weight: 400;
+  font-style: italic;
+}
+.main-content {
+  margin-top: 70px;
+}
+.main-content h1 {
+  font-size: 60px;
+  font-family: Gotham;
+  font-weight: bold;
+}
+.main-content p {
+  font-size: 15px;
+  font-family: Gotham;
+  font-weight: 400;
+}
+
+/* about section */
+.about .container {
+  display: flex;
+  align-items: center;
+}
+.about img {
+  width: 50%;
+}
+
+/* galery section */
+.galery .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.galery .box {
+  position: relative;
+  padding-top: 30%;
+  text-align: center;
+  width: 33%;
+  z-index: 1;
+}
+.galery img {
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+  width: 95%;
+}
+.galery .text {
+  font-size: 10px;
+  font-family: Gotham;
+  font-weight: 400;
+  font-style: italic;
+}
+.galery img:hover {
+  width: 100%;
+  top: 0%;
+  left: 0%;
+}
+
+/* Footer */
+.foot {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  background-color: #33333391;
 }
