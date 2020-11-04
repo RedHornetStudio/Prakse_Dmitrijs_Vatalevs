@@ -1,0 +1,11 @@
+body {
+  margin: 0px;
+}
+
+.nav {
+  display: block;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  border: 3px solid red;
+}
