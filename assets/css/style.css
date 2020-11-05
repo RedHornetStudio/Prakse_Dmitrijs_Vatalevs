@@ -9,32 +9,6 @@ body {
   clear: both;
   display: table;
 }
-
-/* Navigation menu */
-.nav-menu {
-  display: block;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  z-index: 2;
-}
-.nav-menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #33333391;
-}
-.nav-menu li {
-  color: white;
-  float: left;
-  padding: 20px;
-}
-.nav-menu li:hover {
-  background-color: #16161691;
-  cursor: pointer;
-}
-
-/* Main */
 @font-face {
   font-family: Gotham;
   src: url(../../assets/fonts/Gotham-Bold.otf);
@@ -51,21 +25,80 @@ body {
   font-weight: 400;
   font-style: italic;
 }
+
+/* Navigation menu */
+.nav-menu {
+  display: block;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+}
+.nav-menu .visible-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  background-color: #33333391;
+}
+.nav-menu .item {
+  font-size: 30px;
+  color: white;
+  float: left;
+  margin-top: 25px;
+  margin-left: 30px;
+}
+.nav-menu .hidden-menu {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #33333391;
+}
+.nav-menu .hidden-item {
+  display: none;
+}
+.nav-menu .hidden-item, .nav-menu .menu-symbol {
+  font-size: 30px;
+  color: white;
+  padding: 20px;
+}
+.nav-menu li:hover {
+  color: #16161691;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu .visible-menu {
+    display: none;
+  }
+  .nav-menu .hidden-menu {
+    display: block;
+  }
+}
+
+/* Main */
 .main-content {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 .main-content h1 {
   font-size: 60px;
   font-family: Gotham;
   font-weight: bold;
+  margin: 0px;
+  padding: 50px 0px;
 }
 .main-content p {
   font-size: 15px;
   font-family: Gotham;
   font-weight: 400;
+  margin: 0px;
+  padding: 20px 10px;
 }
 
 /* about section */
+.about {
+  background-color: gainsboro;
+}
 .about .container {
   display: flex;
   align-items: center;
@@ -73,13 +106,26 @@ body {
 .about img {
   width: 50%;
 }
+@media screen and (max-width: 768px) {
+  .about .container {
+    flex-direction: column;
+  }
+  .about img {
+    width: 80%;
+  }
+  .about .box-1 {
+    order: 2;
+  }
+  .about .box-2 {
+    order: 1;
+  }
+}
 
 /* galery section */
 .galery .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 .galery .box {
   position: relative;
@@ -105,6 +151,61 @@ body {
   top: 0%;
   left: 0%;
 }
+@media screen and (max-width: 768px) {
+  .galery .container {
+    flex-direction: column;
+  }
+  .galery .box {
+    padding-top: 73%;
+    width: 80%;
+  }
+}
+
+/* Contacts */
+.contacts {
+  background-color: #464646;;
+}
+.contacts h1{
+  color: aliceblue;
+}
+.contacts .container {
+  position: relative;
+  height: 700px;
+}
+.contacts .map {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contacts .tel {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+}
+.contacts .mail {
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+}
+
+/* anchor scroll to top */
+.to-top {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 5px;
+  font-size: 20px;
+  color: blue;
+  cursor: pointer;
+  z-index: 2;
+}
 
 /* Footer */
 .foot {
@@ -115,4 +216,5 @@ body {
   padding: 20px;
   color: white;
   background-color: #33333391;
+  z-index: 2;
 }

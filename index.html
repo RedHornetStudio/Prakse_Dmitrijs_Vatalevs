@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQtQw9sOlWR48-qVlMPCbgIMYf_9nami0&callback=initMap&libraries=&v=weekly" defer></script>
+  <link rel="icon" href="assets/img/The witcher.png" type="image/png" sizes="16x16">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Document</title>
 </head>
 <body>
   <header class="nav-menu">
     <nav>
-      <ul class="clearfix">
-        <li>Sākums</li>
-        <li>Par mums</li>
-        <li>Galerija</li>
-        <li>Kontakti</li>
+      <ul class="clearfix visible-menu">
+        <li class="item" data-name="start">Sākums</li>
+        <li class="item" data-name="about">Par mums</li>
+        <li class="item" data-name="galery">Galerija</li>
+        <li class="item" data-name="contacts">Kontakti</li>
+      </ul>
+      <ul class="hidden-menu">
+        <li class="menu-symbol">&#9776</li>
+        <li class="hidden-item" data-name="start">Sākums</li>
+        <li class="hidden-item" data-name="about">Par mums</li>
+        <li class="hidden-item" data-name="galery">Galerija</li>
+        <li class="hidden-item" data-name="contacts">Kontakti</li>
       </ul>
     </nav>
   </header>
@@ -31,8 +40,8 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est deserunt ipsam assumenda nesciunt delectus veritatis. Sit, quos impedit, <a href="https://www.nintendo.com/">Nintendo</a> aliquam dolor esse deleniti voluptatem suscipit nisi ratione excepturi, optio quaerat cumque corporis labore eum ab dignissimos? Distinctio quos nemo molestiae quod possimus illo magni cum assumenda, debitis blanditiis quibusdam velit officia, sequi, doloribus saepe nam labore odio temporibus. Ratione corrupti eius, facilis dicta numquam at earum. Quas pariatur repellendus, quod facilis qui doloribus.</p>
       </div>
       <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est deserunt ipsam assumenda nesciunt delectus veritatis. Sit, quos impedit, aliquam dolor esse deleniti voluptatem suscipit nisi ratione excepturi, optio quaerat cumque corporis labore eum ab dignissimos? Distinctio quos nemo molestiae quod possimus illo magni cum assumenda, debitis blanditiis quibusdam velit officia, sequi, doloribus saepe nam labore odio temporibus. Ratione corrupti eius, facilis dicta numquam at earum. Quas pariatur repellendus, <a href="https://www.adobe.com/" target="_blank">Adobe</a> quod facilis qui doloribus.</p>
-        <img src="assets/img/karandashi-kapli-pencils-drops-tom-pavlasek.jpg" alt="gamepad">
+        <p class="box-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est deserunt ipsam assumenda nesciunt delectus veritatis. Sit, quos impedit, aliquam dolor esse deleniti voluptatem suscipit nisi ratione excepturi, optio quaerat cumque corporis labore eum ab dignissimos? Distinctio quos nemo molestiae quod possimus illo magni cum assumenda, debitis blanditiis quibusdam velit officia, sequi, doloribus saepe nam labore odio temporibus. Ratione corrupti eius, facilis dicta numquam at earum. Quas pariatur repellendus, <a href="https://www.adobe.com/" target="_blank">Adobe</a> quod facilis qui doloribus.</p>
+        <img class="box-2" src="assets/img/karandashi-kapli-pencils-drops-tom-pavlasek.jpg" alt="gamepad">
       </div>
     </section>
 
@@ -57,9 +66,15 @@
 
     <section class="contacts">
       <h1>Kontakti</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <a href="https://piere.lv/" target="_self">Piere.lv</a> est deserunt ipsam assumenda nesciunt delectus veritatis. Sit, quos impedit, aliquam dolor esse deleniti voluptatem suscipit nisi ratione excepturi, optio quaerat cumque corporis labore eum ab dignissimos? Distinctio quos nemo molestiae quod possimus illo magni cum assumenda, debitis blanditiis quibusdam velit officia, sequi, doloribus saepe nam labore odio temporibus. Ratione corrupti eius, facilis dicta numquam at earum. Quas pariatur repellendus, quod facilis qui doloribus. Ratione incidunt quaerat sed explicabo, nemo earum quo inventore deleniti porro, a in quod delectus iure, nihil animi. Blanditiis aliquid distinctio praesentium earum ab rem consectetur perferendis. Eius, iste unde amet sint consectetur itaque fugit autem, consequatur hic perferendis quia omnis velit mollitia, labore rerum facilis eligendi impedit asperiores natus corporis tempora vitae? Dolor magnam eveniet pariatur. Quam sunt reiciendis commodi nemo nobis in cumque iste voluptatem tenetur possimus, illum eligendi. Tempora modi fugit eveniet rerum velit mollitia debitis delectus alias possimus minus temporibus dolores tempore sit non aperiam ipsa saepe recusandae, cum sunt! Itaque natus exercitationem doloribus sapiente maiores, pariatur fuga vel vitae cupiditate expedita quas alias nesciunt repellat quaerat corrupti consequatur eligendi velit! Nesciunt ea explicabo fuga aspernatur velit vero ipsam natus sunt necessitatibus accusantium accusamus, nostrum facilis reprehenderit soluta nihil amet illum ipsum placeat in harum quidem similique numquam ad? Voluptatem iure provident esse odit libero natus fuga est deserunt, consequatur quibusdam perferendis perspiciatis explicabo omnis iusto itaque, tenetur sunt suscipit iste at. A laboriosam consectetur autem eligendi libero, quaerat porro beatae similique dolorem, optio facilis deleniti? Quae magnam voluptatum similique quia eum odit modi. Vel sapiente neque itaque saepe doloribus explicabo ipsa quos ea nemo assumenda labore non quas temporibus natus accusantium quod iure quae excepturi dignissimos ex consequatur, ipsam ducimus facilis sequi. Nesciunt eos optio ipsa doloremque commodi soluta odio natus eius eligendi reprehenderit dolorem perferendis nemo at porro, voluptatem cum illo dolor distinctio tenetur in veniam numquam, aliquam laborum! Magnam deserunt eum, illo facilis voluptatum, et blanditiis, quae nulla suscipit assumenda quod laudantium expedita natus nesciunt doloribus dolore iusto ab? Aspernatur, ipsam ipsum mollitia asperiores, cumque quos tempora ut ea iste praesentium dolorem pariatur eaque inventore dolore ullam totam in! Fugiat repudiandae iusto facere eum, id ipsa soluta quasi deserunt quod laudantium nobis! Deleniti, <a href="https://github.com/" target="_blank">Github.com</a> minima aliquid? Excepturi tempora fugiat tenetur minima ut, illo repellat sint ea dolorum sunt at natus error nostrum sequi? Impedit accusamus animi explicabo nostrum voluptate vero molestiae rerum.</p>
+      <div class="container">
+        <div class="map"></div>
+        <a class="tel" href="tel: +37125252525">+37125252525</a>
+        <a class="mail" href = "mailto: test@example.com">test@example.com</a>
+      </div>
     </section>
   </main>
+
+  <a class="to-top">Uz augšu&#8593;</a>
 
   <footer class="foot">
     <div>Copyright</div>
